@@ -482,7 +482,10 @@ public class FFmpegMediaMetadataRetriever
 
         BitmapFactory.Options bitmapOptionsCache = new BitmapFactory.Options();
         //bitmapOptionsCache.inPreferredConfig = getInPreferredConfig();
-        bitmapOptionsCache.inDither = false;
+        bitmapOptionsCache.inDither = true;
+        bitmapOptionsCache.inPreferQualityOverSpeed = true;
+        bitmapOptionsCache.inScaled = false;
+
 
         byte [] picture = _getScaledFrameAtTime(timeUs, option, width, height);
 
